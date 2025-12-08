@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outfittery Clone</title>
+    <link rel="stylesheet" href="landing.css">
+</head>
+<body>
+
+<header class="navbar">
+    <img src="https://cdn.prod.envs.lookiero.tech/outfittery/commons/logo/v1/logo_dark.svg" class="logo-img" alt="Logo">
+</header>
+
+<section class="landing-box">
+    <div class="image-slider">
+        <div class="slider-track">
+            <img src="https://images.pexels.com/photos/6311423/pexels-photo-6311423.jpeg" />
+            <img src="https://images.pexels.com/photos/6311426/pexels-photo-6311426.jpeg" />
+            <img src="https://images.pexels.com/photos/6311424/pexels-photo-6311424.jpeg" />
+            <img src="https://images.pexels.com/photos/6311421/pexels-photo-6311421.jpeg" />
+            <img src="https://images.pexels.com/photos/6311420/pexels-photo-6311420.jpeg" />
+        </div>
+    </div>
+
+    <select id="countrySelect" onchange="changeLanguage()">
+        <option value="en">United States</option>
+        <option value="hi">India</option>
+        <option value="es">España</option>
+        <option value="fr">France</option>
+        <option value="de">Deutschland</option>
+        <option value="jp">Japan</option>
+        <option value="cn">China</option>
+        <option value="kr">South Korea</option>
+    </select>
+
+    <h2 id="mainText">Select your country</h2>
+</section>
+
+<script src="landing.js"></script>
+</body>
+</html>
+

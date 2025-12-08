@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+    width: 100%;
+    background: #fff;
+    padding: 15px 40px;
+    border-bottom: 1px solid #e6e6e6;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.logo-img {
+    height: 35px;
+}
+
+/* Landing Box */
+.landing-box {
+    width: 380px;
+    margin: 140px auto;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.12);
+    text-align: center;
+}
+
+/* Slider */
+.image-slider {
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+.slider-track {
+    display: flex;
+    animation: slideLeft 16s linear infinite;
+}
+.slider-track img {
+    width: 100px;
+    height: 120px;
+    object-fit: cover;
+    margin: 5px;
+    border-radius: 8px;
+}
+@keyframes slideLeft {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* Dropdown */
+#countrySelect {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #999;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+/* Text */
+#mainText {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* HOME PAGE */
+.home-hero {
+    margin-top: 110px;
+    text-align: left;
+    padding: 60px 120px;
+}
+
+.cta-btn {
+    margin-top: 15px;
+    padding: 10px 22px;
+    font-size: 18px;
+    background: #0066ff;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.how-it-works {
+    padding: 50px 120px;
+}
+.steps {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}
+.step-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+}
