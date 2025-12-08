@@ -18,11 +18,18 @@ body { background:#fff; }
     height: 100vh;
     object-fit: cover;
 }
-
+.home-hero {
+    margin-top: -20px; /* adjust until perfect */
+}
 
 .hero-section {
-    margin-top: 100px; /* to push below navbar & promo strip */
+    margin-top: 0;   /* remove gap */
+    padding-top: 0;  /* remove top padding */
 }
+.hero-section .row {
+    padding-top: 0;
+}
+
 
 .hero-title {
     font-size: 48px;
@@ -59,7 +66,7 @@ body { background:#fff; }
 /* Video Box Shape */
 .hero-video-box {
     /* height: 600px; */
-    width: 100%;
+    width: 700px;
     border-radius: 12px;
     overflow: hidden;
 }
@@ -67,7 +74,7 @@ body { background:#fff; }
 .hero-video-box video {
 
     width: 100%;
-    height: 500px;
+    height: 600px;
     object-fit: cover;
 }
 
@@ -100,4 +107,130 @@ body { background:#fff; }
     font-size: 15px;
     padding: 0 20px;
 }
+
+/* Blue Section Main */
+.blue-style-section {
+    background: linear-gradient(90deg, #007BFF, #00B4FF);
+    padding: 80px 0;
+    color: #fff;
+}
+
+/* Text */
+.blue-title {
+    font-size: 46px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.blue-text {
+    font-size: 18px;
+    color: #e1f6ff;
+    max-width: 420px;
+}
+
+/* White Button */
+.btn-white {
+    display: inline-block;
+    background: #ffffff;
+    color: #007bff;
+    padding: 12px 26px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 24px;
+}
+
+/* VIDEO — same container layout like hero */
+.blue-video-box {
+    width: 100%;
+    height: 900px; /* adjust height same as screenshot */
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.blue-video-box video {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+/* 
+------------------------------------------------- */
+
+/* Brand Logos Section */
+.brand-section {
+    background: #243240;
+    padding: 80px 0;
+    color: #fff;
+    text-align: center;
+}
+
+.brand-title {
+    font-size: 40px;
+    font-weight: 700;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.brand-text {
+    font-size: 16px;
+    font-style: italic;
+    color: #d7d7d7;
+    margin-bottom: 40px;
+}
+
+/* Logos */
+.brand-logos img {
+    height: 120px;
+    margin: 18px 22px;
+    filter: brightness(0) invert(1); /* make logos white */
+    transition: 0.3s;
+}
+
+.brand-logos img:hover {
+    opacity: 0.75;
+}
+
+/* Your Style Your Rules */
+.rules-section {
+    background: linear-gradient(90deg, #007BFF, #00B4FF);
+    padding: 90px 0;
+    color: #fff;
+}
+
+/* Title */
+.rules-title {
+    font-size: 46px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+/* Bullet points */
+.rules-list {
+    list-style: none;
+    padding: 0;
+    font-size: 18px;
+}
+.rules-list li {
+    margin-bottom: 12px;
+}
+.rules-list li::before {
+    content: "• ";
+    margin-right: 8px;
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Video box */
+.rules-video-box {
+    width: 100%;
+    height: 430px;  /* adjust if needed for perfect height */
+    border-radius: 12px;
+    overflow: hidden;
+}
+.rules-video-box video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 
