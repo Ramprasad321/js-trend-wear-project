@@ -179,7 +179,7 @@ body { background:#fff; }
 
 /* Logos */
 .brand-logos img {
-    height: 120px;
+    height: 100px;
     margin: 18px 22px;
     filter: brightness(0) invert(1); /* make logos white */
     transition: 0.3s;
@@ -189,14 +189,13 @@ body { background:#fff; }
     opacity: 0.75;
 }
 
-/* Your Style Your Rules */
+/* Your Style Your Rules Section */
 .rules-section {
     background: linear-gradient(90deg, #007BFF, #00B4FF);
     padding: 90px 0;
     color: #fff;
 }
 
-/* Title */
 .rules-title {
     font-size: 46px;
     font-weight: 800;
@@ -220,17 +219,60 @@ body { background:#fff; }
     font-weight: bold;
 }
 
-/* Video box */
-.rules-video-box {
+/* Image box same size style as video box */
+.rules-image-box {
     width: 100%;
-    height: 430px;  /* adjust if needed for perfect height */
-    border-radius: 12px;
+    height: 450px;
     overflow: hidden;
+    border-radius: 12px;
 }
-.rules-video-box video {
+.rules-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
+/* Footer */
+.footer-top-line {
+    width: 100%;
+    height: 14px;       /* You can adjust height */
+    background: #f9b529; /* Exact reference yellow */
+}
+
+.footer-section {
+    background: #2a3842;
+    color: #ffffff;
+}
+
+.footer-logo {
+    height: 36px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin: 10px 0;
+    color: #ffffff;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.footer-links li:hover {
+    opacity: 0.8;
+}
+
+.footer-section i {
+    font-size: 26px;
+    margin: 0 10px;
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+.footer-section i:hover {
+    opacity: 0.7;
+}
 
