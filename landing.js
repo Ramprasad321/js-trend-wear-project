@@ -1,4 +1,4 @@
-// 🌍 All translations in one place
+// 🌍 All translations
 const languageData = {
     en: {
         selectCountry:"Select your country",
@@ -26,30 +26,68 @@ const languageData = {
         homeTryTitle:"घर पर आज़माएं",
         homeTryDesc:"जो पसंद आए, वही रखें। बाकी लौटाएं।"
     },
-    es: { selectCountry:"Seleccione su país" },
-    fr: { selectCountry:"Sélectionnez votre pays" },
-    de: { selectCountry:"Wählen Sie Ihr Land aus" },
-    jp: { selectCountry:"国を選択してください" },
-    cn: { selectCountry:"选择你的国家" },
-    kr: { selectCountry:"국가를 선택하세요" }
+    es:{ selectCountry:"Seleccione su país" },
+    fr:{ selectCountry:"Sélectionnez votre pays" },
+    de:{ selectCountry:"Wählen Sie Ihr Land aus" },
+    jp:{ selectCountry:"国を選択してください" },
+    cn:{ selectCountry:"选择你的国家" },
+    kr:{ selectCountry:"국가를 선택하세요" }
 };
 
 // Save & redirect
 function changeLanguage() {
     const lang = document.getElementById("countrySelect").value;
     localStorage.setItem("country", lang);
-    document.getElementById("mainText").textContent = languageData[lang].selectCountry;
-    setTimeout(() => window.location.href = "home.html", 600);
+    document.getElementById("mainText").textContent =
+        languageData[lang]?.selectCountry || "Select your country";
+
+    setTimeout(() => {
+        window.location.href = "home.html";
+    }, 600);
 }
 
-// Apply translation on every page load
+// Apply language everywhere
 function applyLanguage() {
     const lang = localStorage.getItem("country") || "en";
     document.querySelectorAll("[data-translate]").forEach(el => {
-        const key = el.getAttribute("data-translate");
-        if (languageData[lang][key]) {
+        const key = el.dataset.translate;
+        if (languageData[lang] && languageData[lang][key]) {
             el.textContent = languageData[lang][key];
         }
     });
 }
+
 document.addEventListener("DOMContentLoaded", applyLanguage);
+
+getStartedBtn.addEventListener("click", () => {
+    document.body.style.opacity = "0";
+    setTimeout(() => {
+        window.location.href = "home.html";
+    }, 300);
+});
+
+
+
+const toggleBtn = document.getElementById("themeToggle");
+const modeText = document.querySelector(".mode-text");
+
+if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark");
+    toggleBtn.textContent = "☀️";
+    modeText.textContent = "Light";
+}
+
+toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+
+    if (document.body.classList.contains("dark")) {
+        localStorage.setItem("theme", "dark");
+        toggleBtn.textContent = "☀️";
+        modeText.textContent = "Light";
+    } else {
+        localStorage.setItem("theme", "light");
+        toggleBtn.textContent = "🌙";
+        modeText.textContent = "Dark";
+    }
+});
+
