@@ -6,7 +6,7 @@
 }
 
 body {
-    background: linear-gradient(270deg,#8503f7,#f97501,#f9020a,#3503fe);
+    background: linear-gradient(270deg,rgb(37, 33, 249),rgb(8, 2, 124),black,rgb(37, 33, 249),rgb(8, 2, 124));
     background-size: 600% 600%;
     animation: bg 12s ease infinite;
     opacity: 0;
@@ -26,12 +26,12 @@ body.loaded {
 /* NAVBAR */
 .navbar {
     background: #fff;
-    padding: 9px 0;
+    padding: 10px 0;
 }
 
 .logo {
     font-family: 'Cinzel', serif;
-    font-size: 30px;
+    font-size: 28px;
     font-weight: 700;
 }
 
@@ -42,9 +42,10 @@ body.loaded {
     align-items: center;
 }
 
-.nav-menu li {
+.nav-item {
     cursor: pointer;
     font-weight: 600;
+    position: relative;
 }
 
 .login-btn {
@@ -56,38 +57,113 @@ body.loaded {
 /* PROMO */
 .promo-strip {
     margin-top: 70px;
-    background: rgba(255,255,255,0.85);
-    color: #3d1a01;
+    background: rgba(241, 198, 198, 0.85);
     text-align: center;
     padding: 6px;
 }
 
-/* HERO */
-.hero-section {
-    padding: 80px 0;
-
-}
-
-.hero-inner {
+/* HERO / BLUE / RULES COMMON */
+.hero-inner,
+.blue-inner,
+.rules-inner {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     gap: 40px;
-    background: rgba(0,0,0,0.35);
-    border-radius: 20px;
+    /* background: rgba(0,0,0,0.35); */
     padding: 50px;
+    border-radius: 100px;
     color: #fff;
+    height: 600px;
+    background: linear-gradient(to top,white,blue,rgb(2, 2, 2),blue,white);
+    border: 10px double whitesmoke;
 }
 
-.hero-text h1 {
-    font-size: 54px;
-    margin-bottom: 20px;
+.hero-section,
+.blue-section,
+.rules-section {
+    padding: 80px 0;
+}
+
+.hero-text,
+.blue-text,
+.rules-text {
+    flex: 1;
+    margin-left: 60px;
+}
+
+.hero-text h1,
+.blue-text h2,
+.rules-text h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
 }
 
 .hero-text ul li::before {
     content: "✓ ";
-    color: rgb(245, 228, 129);
+    color: gold;
+}
+/* BRAND SECTION */
+.brand-section {
+    padding: 90px 0;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
 }
 
+.brand-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.brand-subtitle {
+    font-size: 16px;
+    opacity: 0.85;
+    margin-bottom: 50px;
+}
+
+.brand-logos {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px 50px;
+    font-size: large;
+
+}
+
+.brand-logos img {
+    height: 80px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0.85;
+}
+
+.brand-logos img:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+
+/* IMAGES */
+.hero-image,
+.blue-image,
+.rules-image {
+    flex: 0.6;
+}
+
+.hero-image img,
+.blue-image img,
+.rules-image img {
+    width: 100%;
+    max-width: 480px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 100px;
+    border: solid black;
+}
+
+/* BUTTON */
 .btn-start {
     margin-top: 20px;
     background: linear-gradient(135deg,#ff7a18,#e52e71);
@@ -95,223 +171,31 @@ body.loaded {
     color: #fff;
     padding: 14px 34px;
     border-radius: 30px;
-    cursor: pointer;
 }
-
-/* HERO INNER – CREATE LEFT GAP IMAGE LAYOUT */
-.hero-inner,
-.blue-inner,
-.rules-inner  {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 50px;
-    gap:20px 0;
-    /* background:linear-gradient(to bottom,rgb(139, 158, 250),rgb(45, 84, 239),rgb(15, 3, 179),rgb(7, 2, 110),rgb(5, 9, 66),
-                                            rgb(7, 2, 110),rgb(15, 3, 179),rgb(45, 84, 239),rgb(139, 158, 250)); */
-    background: black transparent;
-    border-radius: 130px;
-    height: 580px;
-    border: double 9px rgb(250, 250, 250);
-}
-
-/* IMAGE ON LEFT GAP */
-.hero-image,
-.blue-image,
-.rules-image  {
-    flex: 0 0 38%;          /* fills left gap */
-    height: 550px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* IMAGE STYLE */
-.hero-image img,
-.blue-image img,
-.rules-image img{
-    width: 500px;
-    height: 650px;
-    object-fit: cover;
-    border-radius: 30px;
-    box-shadow: 0 20px 45px rgba(103, 255, 245, 0.45);
-    border: #000709 solid 3px;
-}
-
-/* TEXT ON RIGHT */
-.hero-text,
-.blue-text,
-.rules-text {
-    flex: 0 0 55%;
-    margin-left: 100px;
-}
-
 
 /* HOW */
 .how-section {
-    background:linear-gradient(to top,white,orange,rgb(249, 106, 17),orange,white);
+    background: linear-gradient(to top,white,orange,white);
     padding: 80px 0;
 }
-/* HOW IT WORKS TITLE – POSITION + FONT */
-.how-section h2 {
-    font-family: 'Playfair Display', serif; /* different elegant font */
-    font-size: 42px;
-    font-weight: 700;
-    margin-bottom: 40px;
-    margin-top: -30px;   /* 👈 moves heading UP */
-    letter-spacing: 0.5px;
-}
 
-/* HOW IT WORKS – GRID FIX */
 .how-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3,1fr);
     gap: 40px;
 }
 
-/* HOW CARD */
-.how-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-/* MINIMIZED IMAGE SIZE (LIKE HERO STYLE) */
 .how-card img {
-    width: 220px;          
+    width: 220px;
     height: 260px;
-    object-fit: cover;
     border-radius: 18px;
-    margin-bottom: 18px;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.35);
-}
-
-/* TITLE & TEXT SPACING */
-.how-card h4 {
-    margin-top: 10px;
-    font-weight: 700;
-}
-
-.how-card p {
-    font-size: 15px;
-    color: #555;
-    max-width: 260px;
-}
-
-
-/* BLUE */
-.blue-section {
-    padding: 80px 0;
-    background: rgba(0,0,0,0.35);
-    color: #fff;
-}
-
-/* BRAND */
-.brand-section {
-    padding: 80px 0;
-    background: rgba(0,0,0,0.6);
-    color: #fff;
-}
-
-.brand-logos img {
-    height: 90px;
-    margin: 15px;
-    /* filter: invert(1); */
-    color: #fff;
-}
-
-/* RULES */
-.rules-section {
-    padding: 80px 0;
-    background: rgba(0,0,0,0.35);
-    color: #fff;
 }
 
 /* FOOTER */
 .footer {
-    background: #111;
-    color: #fff;
-    text-align: center;
-    padding: 30px;
-}
-
-/* JS ANIMATION */
-[data-animate] {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: 0.7s;
-}
-.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* NAV ITEMS */
-.nav-item {
-    position: relative;
-    cursor: pointer;
-    padding-bottom: 6px;
-    transition: color 0.3s ease;
-}
-
-/* Hover color */
-.nav-item:hover {
-    color: #ff7a18;
-}
-
-/* Underline effect */
-.nav-item::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0%;
-    height: 2px;
-    background: linear-gradient(90deg,#ff7a18,#e52e71);
-    transition: width 0.3s ease;
-}
-
-/* Hover underline */
-.nav-item:hover::after {
-    width: 100%;
-}
-
-/* ACTIVE PAGE */
-.nav-item.active {
-    color: #ff7a18;
-    font-weight: 700;
-}
-
-.nav-item.active::after {
-    width: 100%;
-}
-
-/* Section titles */
-.blue-section h2,
-.rules-section h2 {
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-}
-.hero-text h1{
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-}
-
-/* Optional: body text also (if you want full consistency) */
-.blue-section p,
-.rules-section p,
-.rules-section li {
-    font-family: 'Playfair Display', serif;
-}
-
-/* --------------------footer-------------------------------- */
-.footer {
-    background: #000c12;
+    background:linear-gradient(to top,white,gold,rgb(250, 154, 1),gold,white);
     padding: 60px 0;
-    color: #fff;
+    color: #080808;
 }
 
 .footer-inner {
@@ -319,43 +203,19 @@ body.loaded {
     justify-content: space-between;
     align-items: center;
 }
-
-/* LEFT SIDE */
-.footer-logo {
-    font-family: 'Cinzel', serif;
-    font-size: 22px;
-    font-weight: 700;
-    margin-bottom: 20px;
+.footer-logo{
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
 }
 
-.footer-links {
-    list-style: none;
-    padding: 0;
+/* ANIMATION */
+[data-animate] {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.7s;
 }
 
-.footer-links li {
-    margin: 10px 0;
-    cursor: pointer;
-    opacity: 0.9;
-}
-
-.footer-links li:hover {
+.show {
     opacity: 1;
+    transform: translateY(0);
 }
-
-/* RIGHT SIDE ICONS */
-.footer-right i {
-    font-size: 22px;
-    margin-left: 18px;
-    cursor: pointer;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.footer-right i:hover {
-    transform: scale(1.2);
-    opacity: 0.8;
-}
-
-
-
-
