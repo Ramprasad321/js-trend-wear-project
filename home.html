@@ -1,240 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Outfittery - Home</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trend Wears | Home</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="home.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+<!-- Logo Font (Same as Landing Page) -->
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="home.css">
 </head>
 
 <body>
 
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg bg-white shadow-sm fixed-top">
-    <div class="container">
-        <a class="navbar-brand">
-            <img src="https://cdn.prod.envs.lookiero.tech/outfittery/commons/logo/v1/logo_dark.svg" style="height:42px;">
-        </a>
+<nav class="navbar fixed-top">
+    <div class="container d-flex align-items-center justify-content-between">
 
-        <ul class="navbar-nav ms-auto align-items-center">
-            <li class="nav-item mx-2"><a class="nav-link" data-translate="women"></a></li>
-            <li class="nav-item mx-2"><a class="nav-link" data-translate="men"></a></li>
-            <li class="nav-item mx-2">
-            <a class="btn btn-outline-dark rounded-pill px-4" href="register.html">Log in</a>
+        <div class="logo">
+            {♂♀} TREND WEARS
+        </div>
 
-            </li>
-        </ul>
+<ul class="nav-menu">
+    <li data-page="home" class="nav-item">Home</li>
+    <li data-page="women" class="nav-item">Women</li>
+    <li data-page="men" class="nav-item">Men</li>
+    <li class="login-btn nav-item" id="loginBtn">Log in</li>
+</ul>
+
     </div>
 </nav>
 
-<!-- Promo Strip -->
-<div class="promo-strip text-center small">
-    Try it for free! Code: FIRSTBOX
+<!-- PROMO -->
+<div class="promo-strip">
+    Design Your Dress For Free!
 </div>
 
+<!-- HERO -->
+<section class="hero-section" data-animate>
+    <div class="container hero-inner">
 
-<section class="hero-section container py-5">
-    <div class="row align-items-center g-0">
-
-        <!-- LEFT TEXT -->
-        <div class="col-lg-6 p-4">
-            <h1 class="hero-title">Your style,<br> your way</h1>
-
-            <ul class="hero-list mt-4">
-                <li>Looks selected for you by your personal stylist</li>
+        <div class="hero-text">
+            <h1>Your style,<br>your way</h1>
+            <ul>
+                <li>Looks selected by your stylist</li>
                 <li>Only pay for what you keep</li>
-                <li>Free shipping and returns</li>
+                <li>Free shipping & returns</li>
             </ul>
-
-            <a href="#" class="btn-start mt-3">Start now</a>
+            <button class="btn-start" data-hover>Start now</button>
         </div>
 
-        <!-- RIGHT VIDEO -->
-        <div class="col-lg-6">
-            <div class="hero-video-box">
-                <video autoplay muted loop playsinline>
-                    <source src="https://cdn.prod.envs.lookiero.tech/log-landing/outfittery/videos/above-the-fold/control/neutral/01@3x.mp4" type="video/mp4">
-                </video>
-            </div>
-        </div>
+        <!-- <div class="hero-image">
+            <img src="https://i.pinimg.com/736x/08/ab/26/08ab26a9287bf16f2ef50c74de50ec79.jpg">
+        </div> -->
+<div class="hero-image">
+    <img src="https://i.pinimg.com/736x/b8/ec/73/b8ec73952404361b236d12836e07c42d.jpg">
+</div>
 
-    </div>
+<div class="hero-text"></div>
 </section>
 
 <!-- HOW IT WORKS -->
-<section class="how-it-works-section container py-5">
-    <h2 class="how-title">How it works</h2>
-    <p class="how-subtitle">
-        Follow these three simple steps so that your stylist can prepare your box
-    </p>
-
-    <div class="row text-center mt-4">
-
-        <!-- Step 1 -->
-        <div class="col-lg-4">
-            <img src="https://cdn.prod.envs.lookiero.tech/log-landing/outfittery/images/how-it-works/control/neutral/01@2x.avif"
-                class="how-img">
-            <h5 class="how-step-title mt-3">Take your style quiz</h5>
-            <p class="how-step-text">
-                Tell us about your style, size, budget and preferences. The more we know,
-                the better your stylist can help you.
-            </p>
-        </div>
-
-        <!-- Step 2 -->
-        <div class="col-lg-4">
-            <img src="https://cdn.prod.envs.lookiero.tech/log-landing/outfittery/images/how-it-works/control/neutral/02@2x.avif"
-                class="how-img">
-            <h5 class="how-step-title mt-3">A box that is 100% personalised</h5>
-            <p class="how-step-text">
-                Review your stylist's selection before it is shipped. If you're not sure,
-                you can remove or leave comments to switch up your final box.
-            </p>
-        </div>
-
-        <!-- Step 3 -->
-        <div class="col-lg-4">
-            <img src="https://cdn.prod.envs.lookiero.tech/log-landing/outfittery/images/how-it-works/control/neutral/03@2x.avif"
-                class="how-img">
-            <h5 class="how-step-title mt-3">Try everything on at home and pay later</h5>
-            <p class="how-step-text">
-                Try everything on at your own pace. Only pay for what you keep.
-                Shipping and returns are always free.
-            </p>
-        </div>
-
-    </div>
-
-    <div class="text-center mt-4">
-        <a href="#" class="btn-start">Start now</a>
-    </div>
-
-</section>
-
-<!-- BLUE STYLING SECTION -->
-<section class="blue-style-section">
+<section class="how-section" data-animate>
     <div class="container">
-        <div class="row align-items-center g-0">
+        <h2>How it works</h2>
 
-            <!-- LEFT TEXT -->
-            <div class="col-lg-6 p-5">
-                <h2 class="blue-title">
-                    Tell us what you like.<br>We’ll find it.
-                </h2>
-                <p class="blue-text">
-                    From office looks to evening outfits, we adapt each selection to you
-                    so that stylish dressing can be quick and easy.
-                </p>
-                <a href="#" class="btn-white">Start now</a>
+        <div class="how-grid">
+            <div class="how-card">
+                <img src="https://i.pinimg.com/1200x/85/ce/91/85ce918e1953998bcf9f33a607c60ed9.jpg">
+                <h4>Take your style quiz</h4>
+                <p>Tell us about your preferences</p>
             </div>
 
-            <!-- RIGHT VIDEO (same style as hero) -->
-            <div class="col-lg-6">
-                <div class="blue-video-box">
-                    <video autoplay muted loop playsinline>
-                        <source src="https://cdn.prod.envs.lookiero.tech/log-landing/outfittery/videos/product-showcase/control/neutral/01@3x.mp4" type="video/mp4">
-                    </video>
-                </div>
+            <div class="how-card">
+                <img src="https://i.pinimg.com/1200x/53/1c/02/531c02696cf486741c397722260c9c72.jpg">
+                <h4>Personalised box</h4>
+                <p>Styled just for you</p>
             </div>
 
+            <div class="how-card">
+                <img src="https://i.pinimg.com/1200x/4d/bd/3a/4dbd3a6c711cc756c89e33b722e54e44.jpg">
+                <h4>Try at home</h4>
+                <p>Only pay what you keep</p>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- BRAND LOGOS SECTION -->
-<section class="brand-section">
+<!-- BLUE SECTION -->
+<section class="blue-section" data-animate>
+    <div class="container blue-inner">
+
+        <div class="blue-text">
+            <h2>Tell us what you like.<br>We’ll find it.</h2>
+            <p>Fashion made simple and personal.</p>
+            <!-- <button class="btn-white" data-hover>Start now</button> -->
+        </div>
+<!-- 
+        <div class="blue-image">
+            <img src="https://i.pinimg.com/736x/02/5c/8a/025c8a8c770edde7ca7d4f97dde0febf.jpg">
+        </div> -->
+        <div class="blue-image">
+    <img src="https://i.pinimg.com/1200x/b2/e4/e7/b2e4e7ca3db4acdbc64b0dbdff94b4fb.jpg">
+</div>
+<div class="blue-text">
+
+</div>
+
+</section>
+
+<!-- BRAND SECTION (MUST) -->
+<section class="brand-section" data-animate>
     <div class="container text-center">
 
-        <h2 class="brand-title">Every brand, category and size</h2>
-        <p class="brand-text">
-            We work with over 150 brands to be able to offer you quality, versatility and style in each garment.
-        </p>
+        <h2>Every brand, category and size</h2>
+        <p>We work with top brands worldwide</p>
 
         <div class="brand-logos">
             <img src="https://cdn.prod.envs.lookiero.tech/log-landing/outfittery/images/brands/control/Vero_moda@3x.png">
-            <img src="https://cdn.prod.envs.lookiero.tech/log-landing/outfittery/images/brands/control/Joop@3x.png">
-            <img src="https://cdn.prod.envs.lookiero.tech/log-landing/outfittery/images/brands/control/Vila@3x.png">
-            <img src="https://cdn.prod.envs.lookiero.tech/log-landing/outfittery/images/brands/control/SuperDry@3x.png">
-            <img src="https://cdn.prod.envs.lookiero.tech/log-landing/outfittery/images/brands/control/Tomtailor@3x.png"><br>
-
-            <img src="https://cdn.prod.envs.lookiero.tech/log-landing/outfittery/images/brands/control/Boss@3x.png">
-            <img src="https://cdn.prod.envs.lookiero.tech/log-landing/outfittery/images/brands/control/Lacoste@3x.png">
             <img src="https://cdn.prod.envs.lookiero.tech/log-landing/outfittery/images/brands/control/Adidas@3x.png">
+            <img src="https://cdn.prod.envs.lookiero.tech/log-landing/outfittery/images/brands/control/Puma@3x.png">
+            <img src="https://cdn.prod.envs.lookiero.tech/log-landing/outfittery/images/brands/control/New_Balance@3x.png">
+            <img src="https://cdn.prod.envs.lookiero.tech/log-landing/outfittery/images/brands/control/Lacoste@3x.png"><br>
+            <img src="https://cdn.prod.envs.lookiero.tech/log-landing/outfittery/images/brands/control/Tomtailor@3x.png">
+            <img src="https://cdn.prod.envs.lookiero.tech/log-landing/outfittery/images/brands/control/Joop@3x.png">
             <img src="https://cdn.prod.envs.lookiero.tech/log-landing/outfittery/images/brands/control/Nowadays@3x.png">
-            <img src="https://cdn.prod.envs.lookiero.tech/log-landing/outfittery/images/brands/control/New_Balance@3x.png"><br>
-
-            <img src="https://cdn.prod.envs.lookiero.tech/log-landing/outfittery/images/brands/control/JnJ@3x.png">
             <img src="https://cdn.prod.envs.lookiero.tech/log-landing/outfittery/images/brands/control/Clean_cut_Copenhagen@3x.png">
+            <img src="https://cdn.prod.envs.lookiero.tech/log-landing/outfittery/images/brands/control/MarcoPolo@3x.png"><br>
+            <img src="https://cdn.prod.envs.lookiero.tech/log-landing/outfittery/images/brands/control/JnJ@3x.png">
+            <img src="https://cdn.prod.envs.lookiero.tech/log-landing/outfittery/images/brands/control/SuperDry@3x.png">
+            <img src="https://cdn.prod.envs.lookiero.tech/log-landing/outfittery/images/brands/control/Vila@3x.png">
+            <img src="https://cdn.prod.envs.lookiero.tech/log-landing/outfittery/images/brands/control/Boss@3x.png">
             <img src="https://cdn.prod.envs.lookiero.tech/log-landing/outfittery/images/brands/control/Lindbergh@3x.png">
-            <img src="https://cdn.prod.envs.lookiero.tech/log-landing/outfittery/images/brands/control/Puma@3x.pngg">
-            <img src="https://cdn.prod.envs.lookiero.tech/log-landing/outfittery/images/brands/control/MarcoPolo@3x.png">
         </div>
 
     </div>
 </section>
 
-<!-- YOUR STYLE, YOUR RULES SECTION -->
-<!-- YOUR STYLE, YOUR RULES SECTION -->
-<section class="rules-section">
-    <div class="container">
-        <div class="row align-items-center g-0">
+<!-- RULES SECTION -->
+<section class="rules-section" data-animate>
+    <div class="container rules-inner">
 
-            <!-- LEFT -->
-            <div class="col-lg-6 p-5">
-                <h2 class="rules-title">Your style, your rules</h2>
-
-                <ul class="rules-list mt-3">
-                    <li>Switch up your preferences whenever you like</li>
-                    <li>Only pay for what you keep</li>
-                    <li>Free shipping, returns and exchanges</li>
-                </ul>
-
-                <a href="#" class="btn-white mt-4">Start now</a>
-            </div>
-
-            <!-- RIGHT STATIC IMAGE -->
-            <div class="col-lg-6">
-                <div class="rules-image-box">
-                    <img src="https://cdn.prod.envs.lookiero.tech/log-landing/outfittery/images/closing/Box@3x.png"alt="style-rules" class="rules-img">
-                </div>
-            </div>
-
+        <div class="rules-text">
+            <h2>Your style, your rules</h2>
+            <ul>
+                <li>Change preferences anytime</li>
+                <li>Only pay for what you keep</li>
+                <li>Free shipping & returns</li>
+            </ul>
+            <!-- <button class="btn-white" data-hover>Start now</button> -->
         </div>
+
+        <!-- <div class="rules-image">
+            <img src="https://i.pinimg.com/1200x/98/8e/64/988e647828f50eb98349a79987d04b65.jpg">
+        </div> -->
+        <div class="rules-image">
+    <img src="https://i.pinimg.com/1200x/23/4e/17/234e17fe283bb384c8bfab5da8b52b65.jpg">
+</div>
+
+<div class="rules-text">
     </div>
 </section>
+
 <!-- FOOTER -->
-<div class="footer-top-line"></div>
-<footer class="footer-section">
-    <div class="container">
-        <div class="row align-items-center py-5">
+<footer class="footer">
+    <div class="container footer-inner">
 
-            <!-- Left Logo + Links -->
-            <div class="col-md-6 text-center text-md-start mb-4 mb-md-0">
-                <img src="https://cdn.prod.envs.lookiero.tech/outfittery/commons/logo/v1/logo_light.svg" 
-                    alt="logo" class="footer-logo mb-3">
-
-                <ul class="footer-links">
-                    <li>FAQs</li>
-                    <li>Terms & Conditions</li>
-                    <li>Gift card</li>
-                    <li>Contact</li>
-                </ul>
+        <!-- LEFT -->
+        <div class="footer-left">
+            <div class="footer-logo">
+                {♂♀} TREND WEARS
             </div>
 
-            <!-- Right Social -->
-            <div class="col-md-6 text-center text-md-end">
-                <a href="#"><i class="bi bi-facebook"></i></a>
-                <a href="#"><i class="bi bi-instagram"></i></a>
-            </div>
-
+            <ul class="footer-links">
+                <li>FAQs</li>
+                <li>Terms & Conditions</li>
+                <li>Gift card</li>
+            </ul>
         </div>
+
+        <!-- RIGHT -->
+        <div class="footer-right">
+            <i class="bi bi-facebook"></i>
+            <i class="bi bi-instagram"></i>
+            <i class="bi bi-whatsapp"></i>
+            <i class="bi bi-twitter-x"></i>
+            <i class="bi bi-youtube"></i>
+        </div>
+
     </div>
 </footer>
+
 
 <script src="home.js"></script>
 </body>
